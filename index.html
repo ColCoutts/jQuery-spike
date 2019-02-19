@@ -5,33 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-$(document).ready(function(){
-  $("button").click(function(){
-    $("p").hide();
-  });
-});
-</script>
-<script>
+    
     $(document).ready(function(){
-  $("#p1").hover(function(){
-    alert("You entered p1!");
-  },
-  function(){
-    alert("Bye! You now leave p1!");
-  }); 
+        $("button").click(function(){
+        $("#p1").hide(300);
+        $("#slider").rangeSlider();
+        });
+    });
+ </script>
+ <!-- <script>
+$(document).ready(function(){
+    $("#slider").rangeSlider();
 });
-</script>
-<script>
-    $( "div#range-slider" ).rangeslider();
-</script>
-
+ </script> -->
 
 </head>
 <body>
-    <p id="p1">This is a paragraph.</p>
-    <p>Date: <input type="text" id="datepicker"></p>
+
+    <b>Price Range</b><span id="range"></span>
+
+    <div id="slider"></div>
+
+
+
+
+
+
+    <p id="p1">This is THE paragraph.</p>
 
     <h2>This is a heading</h2>
 
@@ -40,14 +45,5 @@ $(document).ready(function(){
     
     <button>Click me</button>
 
-    <div class="ui-field-contain">
-            <div data-role="rangeslider">
-              <label for="range-7a">Rangeslider:</label>
-              <input name="range-7a" id="range-7a" min="0" max="100" value="0" type="range" />
-              <label for="range-7b">Rangeslider:</label>
-              <input name="range-7b" id="range-7b" min="0" max="100" value="100" type="range" />
-            </div>
-          </div>
-    
 </body>
 </html>

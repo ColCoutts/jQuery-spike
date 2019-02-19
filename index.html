@@ -13,13 +13,41 @@ $(document).ready(function(){
   });
 });
 </script>
+<script>
+    $(document).ready(function(){
+  $("#p1").hover(function(){
+    alert("You entered p1!");
+  },
+  function(){
+    alert("Bye! You now leave p1!");
+  }); 
+});
+</script>
+<script>
+    $( "div#range-slider" ).rangeslider();
+</script>
+
+
 </head>
 <body>
+    <p id="p1">This is a paragraph.</p>
+    <p>Date: <input type="text" id="datepicker"></p>
+
     <h2>This is a heading</h2>
 
     <p>This is a paragraph.</p>
     <p>This is another paragraph.</p>
     
     <button>Click me</button>
+
+    <div class="ui-field-contain">
+            <div data-role="rangeslider">
+              <label for="range-7a">Rangeslider:</label>
+              <input name="range-7a" id="range-7a" min="0" max="100" value="0" type="range" />
+              <label for="range-7b">Rangeslider:</label>
+              <input name="range-7b" id="range-7b" min="0" max="100" value="100" type="range" />
+            </div>
+          </div>
+    
 </body>
 </html>
